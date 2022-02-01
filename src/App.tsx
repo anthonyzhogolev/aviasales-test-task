@@ -20,6 +20,9 @@ function App() {
         main: "#2196F3",
         light: "#F1FCFF"
       },
+      secondary: {
+        main: "#F1FCFF"
+      },
       text: {
         primary: "#4A4A4A",
         secondary: "#A0B0B9",
@@ -34,7 +37,7 @@ function App() {
         <React.Fragment>
           <CssBaseline />
           <Container maxWidth="md">
-            <Box sx={{ display: "flex", flexDirection: 'row', justifyContent: "center",marginBottom:"50px" }}>
+            <Box sx={{ display: "flex", flexDirection: 'row', justifyContent: "center", marginBottom: "50px" }}>
               <img src="Logo.png" />
             </Box>
             <Box sx={{ display: "flex", columnGap: "20px", flexDirection: 'row' }}>

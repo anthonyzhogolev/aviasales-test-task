@@ -1,10 +1,20 @@
 import React from 'react';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-import Card from '@mui/material/Card';
-import Box from '@mui/material/Box';
+import { styled } from '@mui/system';
 
 
+
+
+const StyledToogleButton = styled(ToggleButton)(({ theme }) => ({
+    padding: "10px 20px",
+    '&.selected': {
+        backgroundColor: theme.palette.primary.main
+    },
+    '&:hover': {
+        backgroundColor: theme.palette.secondary.main
+    }
+}))
 
 export default function HeaderPanel() {
     const [alignment, setAlignment] = React.useState('web');
@@ -18,17 +28,17 @@ export default function HeaderPanel() {
 
 
     return (
-        <Card>
-            <ToggleButtonGroup
-                color="primary"
-                value={alignment}
-                exclusive
-                onChange={handleChange}
-            >
-                <ToggleButton value="price">Самый дешёвый</ToggleButton>
-                <ToggleButton value="time">Самый быстрый</ToggleButton>
-                <ToggleButton value="both">Оптимальный</ToggleButton>
-            </ToggleButtonGroup>
-        </Card>
+
+        <ToggleButtonGroup
+            color="primary"
+            value={alignment}
+            exclusive
+            onChange={handleChange}
+        >
+            <StyledToogleButton value="price">Самый дешёвый</StyledToogleButton>
+            <StyledToogleButton value="time">Самый быстрый</StyledToogleButton>
+            <StyledToogleButton value="both">Оптимальный</StyledToogleButton>
+        </ToggleButtonGroup>
+
     );
 }
