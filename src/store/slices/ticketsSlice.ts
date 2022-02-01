@@ -25,9 +25,8 @@ const ticketsSlice = createSlice({
         state.error = null;
       })
       .addCase(fetchTickets.fulfilled, (state, action) => {
-        console.log("state1", state);
         ticketsAdapter.setAll(state, action.payload);
-        console.log("state2", state);
+
         state.loading = "idle";
         state.error = null;
       })

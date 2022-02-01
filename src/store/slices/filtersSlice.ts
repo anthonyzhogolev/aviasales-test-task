@@ -1,18 +1,9 @@
-import {
-  createSlice,
-  createEntityAdapter,
-  PayloadAction,
-} from "@reduxjs/toolkit";
-
-import { Company } from "@app/interfaces";
-
-import { RootState } from ".";
-
-const filtersAdapter = createEntityAdapter<Company>();
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const initialState = {
   segmentsCount: [] as number[],
   company: "" as string,
+  category: "" as string,
 };
 
 export type FiltersType = typeof initialState;
@@ -21,6 +12,10 @@ export const filtersSlice = createSlice({
   name: "filters",
   initialState,
   reducers: {
+    setCategory: (state, action: PayloadAction<string>) => {
+      state.category = action.payload;
+    },
+
     setCompany: (state, action: PayloadAction<string>) => {
       state.company = action.payload;
     },
