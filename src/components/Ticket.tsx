@@ -1,16 +1,18 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Card from "@mui/material/Card";
 import Box from '@mui/material/Box';
-import { Ticket as TicketType } from "../interfaces";
 import { styled } from '@mui/system';
 
-import { useSelector } from 'react-redux';
-import { RootState } from '../slices';
-import { CompaniesSelector } from "../slices/companiesSlice";
+import { Ticket as TicketType } from "@app/interfaces";
+
+
+
+import { RootState } from '@store/slices';
+import { CompaniesSelector } from "@store/slices/companiesSlice";
+import { Company } from "@app/interfaces";
 
 import Segment from './Segment';
-
-import { Company } from "../interfaces";
 
 const TicketCard = styled(Card)({
     padding: "20px",

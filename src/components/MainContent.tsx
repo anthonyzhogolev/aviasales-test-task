@@ -4,15 +4,14 @@ import Box from '@mui/material/Box';
 import { styled } from '@mui/system';
 import { isEqual } from 'lodash';
 
+import { fetchTickets } from '@store/thunks/tickets';
+import { TicketsSelector } from '@store/slices/ticketsSlice';
+import { Ticket as TicketType } from "@app/interfaces";
+import { RootState } from '@store/slices';
+import { FiltersType } from '@store/slices/filtersSlice';
+
 import HeaderPanel from './HeaderPanel';
 import Ticket from './Ticket';
-
-import { fetchTickets } from '../thunks/tickets';
-import { TicketsSelector } from '../slices/ticketsSlice';
-import { Ticket as TicketType } from "../interfaces";
-import { RootState } from '../slices';
-import { FiltersType } from '../slices/filtersSlice';
-
 
 const Wrapper = styled(Box)({
     display: "flex",

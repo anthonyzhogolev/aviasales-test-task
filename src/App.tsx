@@ -8,7 +8,7 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-import store from './slices/index'
+import store from './store/slices/index'
 import Sidebar from './components/Sidebar';
 import MainContent from './components/MainContent';
 

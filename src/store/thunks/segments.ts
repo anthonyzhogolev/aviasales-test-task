@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-import segments from "../data/segments.json";
-import { Segment } from "../interfaces";
+import segments from "@app/data/segments.json";
+import { Segment } from "@app/interfaces";
 
 export const fetchSegments = createAsyncThunk<Segment[], string[]>(
   "segments/fetchSegments",

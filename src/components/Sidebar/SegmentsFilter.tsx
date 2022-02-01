@@ -1,14 +1,15 @@
 import { Card } from '@mui/material';
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import { styled } from '@mui/system';
 
-import { filtersSlice } from '../../slices/filtersSlice';
-import { RootState } from '../../slices';
-import { useDispatch, useSelector } from 'react-redux';
+import { filtersSlice } from '@store/slices/filtersSlice';
+import { RootState } from '@store/slices';
+
 
 import Title from './SectionTitle';
 

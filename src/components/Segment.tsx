@@ -2,11 +2,12 @@ import React from 'react';
 
 import { useSelector } from 'react-redux';
 import Box from '@mui/material/Box';
-import { SegmentsSelector } from "../slices/segmentsSlice";
 import { styled } from '@mui/system';
-import { Segment as SegmentType } from "../interfaces";
-import { RootState } from '../slices';
-import { formatStopsCountLabel, formatFlightTime, formatDuration, formatStops } from '../utils';
+
+import { SegmentsSelector } from "@store/slices/segmentsSlice";
+import { Segment as SegmentType } from "@app/interfaces";
+import { RootState } from '@store/slices';
+import { formatStopsCountLabel, formatFlightTime, formatDuration, formatStops } from '@app/utils';
 
 const Wrapper = styled(Box)({
     display: 'flex',

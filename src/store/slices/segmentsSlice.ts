@@ -1,6 +1,8 @@
 import { createSlice, createEntityAdapter } from "@reduxjs/toolkit";
-import { fetchSegments } from "../thunks/segments";
-import { Segment } from "../interfaces";
+
+import { fetchSegments } from "@store/thunks/segments";
+import { Segment } from "@app/interfaces";
+
 import { RootState } from ".";
 
 const segmentsAdapter = createEntityAdapter<Segment>();

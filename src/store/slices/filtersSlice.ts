@@ -4,7 +4,8 @@ import {
   PayloadAction,
 } from "@reduxjs/toolkit";
 
-import { Company } from "../interfaces";
+import { Company } from "@app/interfaces";
+
 import { RootState } from ".";
 
 const filtersAdapter = createEntityAdapter<Company>();

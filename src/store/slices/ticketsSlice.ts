@@ -3,9 +3,11 @@ import {
   createEntityAdapter,
   createSelector,
 } from "@reduxjs/toolkit";
-import { fetchTickets } from "../thunks/tickets";
+
+import { fetchTickets } from "@store/thunks/tickets";
+import { Ticket } from "@app/interfaces";
+
 import { RootState } from "./index";
-import { Ticket } from "../interfaces";
 
 const ticketsAdapter = createEntityAdapter<Ticket>();
 

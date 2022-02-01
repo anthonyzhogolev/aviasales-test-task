@@ -1,6 +1,8 @@
 import { createSlice, createEntityAdapter } from "@reduxjs/toolkit";
-import { fetchCompanies } from "../thunks/companies";
-import { Company } from "../interfaces";
+
+import { fetchCompanies } from "@store/thunks/companies";
+import { Company } from "@app/interfaces";
+
 import { RootState } from ".";
 
 const companiesAdapter = createEntityAdapter<Company>();
@@ -21,4 +23,3 @@ export default companiesSlice.reducer;
 export const CompaniesSelector = companiesAdapter.getSelectors<RootState>(
   (state) => state.companies
 );
-

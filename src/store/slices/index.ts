@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+
 import ticketsReducer from "./ticketsSlice";
 import segmentsReducer from "./segmentsSlice";
 import companiesReducer from "./companiesSlice";

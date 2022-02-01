@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -7,11 +8,11 @@ import FormLabel from '@mui/material/FormLabel';
 import Card from '@mui/material/Card';
 import { styled } from '@mui/system';
 
-import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../../slices';
-import { CompaniesSelector } from "../../slices/companiesSlice";
-import { filtersSlice } from '../../slices/filtersSlice';
-import { Company } from "../../interfaces";
+
+import { RootState } from '@store/slices';
+import { CompaniesSelector } from "@store/slices/companiesSlice";
+import { filtersSlice } from '@store/slices/filtersSlice';
+import { Company } from "@app/interfaces";
 
 import Title from "./SectionTitle";
 

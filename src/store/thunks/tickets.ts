@@ -1,10 +1,11 @@
 import { createAsyncThunk, current } from "@reduxjs/toolkit";
 
-import tickets from "../data/tickets.json";
-import { Ticket } from "../interfaces";
+import tickets from "@app/data/tickets.json";
+import { Ticket } from "@app/interfaces";
+import { FiltersType } from "@store/slices/filtersSlice";
+
 import { fetchSegments } from "./segments";
 import { fetchCompanies } from "./companies";
-import { FiltersType } from "../slices/filtersSlice";
 
 const DEFAULT_PAGE_SIZE = 5;
 
