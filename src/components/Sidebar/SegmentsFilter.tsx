@@ -3,23 +3,21 @@ import React from 'react';
 
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
-// import Checkbox from '@mui/material/Checkbox';
 import Checkbox from '@mui/material/Checkbox';
 import { styled } from '@mui/system';
 
-import { filtersSlice } from '../slices/filtersSlice';
-import { RootState } from '../slices';
+import { filtersSlice } from '../../slices/filtersSlice';
+import { RootState } from '../../slices';
 import { useDispatch, useSelector } from 'react-redux';
 
-const Title = styled('div')({
-    letterSpacing: "0.5px",
-    textTransform: "uppercase",
-    fontWeight: 600,
-    fontSize: "12px"
-});
+import Title from './SectionTitle';
 
-const SegmentsFilterCard = styled(Card)({ display: "flex", flexDirection: "column" })
 
+const SegmentsFilterCard = styled(Card)({
+    display: "flex",
+    flexDirection: "column",
+    padding: "20px"
+})
 
 export default function SegmentsFilter() {
 

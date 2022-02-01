@@ -34,6 +34,9 @@ function App() {
         <React.Fragment>
           <CssBaseline />
           <Container maxWidth="md">
+            <Box sx={{ display: "flex", flexDirection: 'row', justifyContent: "center",marginBottom:"50px" }}>
+              <img src="Logo.png" />
+            </Box>
             <Box sx={{ display: "flex", columnGap: "20px", flexDirection: 'row' }}>
               <Sidebar />
               <MainContent />

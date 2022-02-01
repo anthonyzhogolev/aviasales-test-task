@@ -5,13 +5,21 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import Card from '@mui/material/Card';
+import { styled } from '@mui/system';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../slices';
-import { CompaniesSelector } from "../slices/companiesSlice";
-import { filtersSlice } from '../slices/filtersSlice';
+import { RootState } from '../../slices';
+import { CompaniesSelector } from "../../slices/companiesSlice";
+import { filtersSlice } from '../../slices/filtersSlice';
+import { Company } from "../../interfaces";
 
-import { Company } from "../interfaces";
+import Title from "./SectionTitle";
+
+const SegmentsFilterCard = styled(Card)({
+    display: "flex",
+    flexDirection: "column",
+    padding: "20px"
+})
 
 export default function CompaniesFilter() {
 
@@ -28,7 +36,8 @@ export default function CompaniesFilter() {
     }
 
     return (
-        <Card>
+        <SegmentsFilterCard>
+            <Title>Компания</Title>
             <FormControl>
                 <FormLabel id="demo-radio-buttons-group-label"></FormLabel>
                 <RadioGroup
@@ -43,6 +52,6 @@ export default function CompaniesFilter() {
                     {companies.map((company) => <FormControlLabel value={company.id} control={<Radio />} label={company.name} />)}
                 </RadioGroup>
             </FormControl>
-        </Card>
+        </SegmentsFilterCard>
     );
 }
